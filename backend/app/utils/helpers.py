@@ -45,7 +45,12 @@ def create_initial_state(leads_data: List[Dict[str, Any]]) -> Dict[str, Any]:
         "leads": leads,
         "messages": [],
         "status": "initialized",
-        "created_at": created_at
+        "execution_mode": "sync",
+        "message_status": {},
+        "errors": [],
+        "human_approved": False,
+        "created_at": created_at,
+        "updated_at": created_at,
     }
     
     return state_dict
